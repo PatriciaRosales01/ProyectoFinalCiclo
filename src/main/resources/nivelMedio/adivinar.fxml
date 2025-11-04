@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.nivelMedio.ControladorAdivinar">
+    <children>
+        <Label layoutX="190.0" layoutY="34.0" text="Adivinar palabra">
+            <font>
+                <Font size="18.0" />
+            </font></Label>
+        <Label fx:id="frase" layoutX="177.0" layoutY="72.0" text="Frase para adivinar la palabra" />
+        <TextField fx:id="español" alignment="CENTER" layoutX="219.0" layoutY="120.0" prefHeight="26.0" prefWidth="167.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Button layoutX="338.0" layoutY="253.0" mnemonicParsing="false" onAction="#aceptarComprobar" text="Menú" />
+        <TextField fx:id="ingles" alignment="CENTER" layoutX="219.0" layoutY="162.0" prefHeight="26.0" prefWidth="167.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="frances" alignment="CENTER" layoutX="219.0" layoutY="207.0" prefHeight="26.0" prefWidth="167.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label layoutX="102.0" layoutY="126.0" text="Español" />
+        <Label layoutX="102.0" layoutY="168.0" text="Inglés" />
+        <Label layoutX="102.0" layoutY="213.0" text="Francés" />
+        <Button layoutX="134.0" layoutY="253.0" mnemonicParsing="false" onAction="#comprobar" text="Siguiente palabra" />
+    </children>
+</AnchorPane>

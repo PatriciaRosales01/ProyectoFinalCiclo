@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="Creado nivelFacil.fxml y su ControladorNivelFacil.java&#10;Creado nivelMedio.fxml y su ControladorNivelMedio.java&#10;Creado nivelDificil.fxml y su ControladorNivelDificil.java">
+    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +67,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\resources\nivelMedio" />
+      <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\resources\nivelFacil" />
+      <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\resources\nivelDificil" />
     </key>
   </component>
   <component name="RunManager">
@@ -131,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762255615760</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creados paquetes para separar por niveles de dificultad">
+      <option name="closed" value="true" />
+      <created>1762256480720</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762256480720</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +165,7 @@
     <MESSAGE value="Añadido module-info.javarefc&#10;Creado inicio.fxml para la ventana principal y su ControladorInicio.java" />
     <MESSAGE value="Creado dificultad.fxml para la ventana principal y su ControladorDificultad.java" />
     <MESSAGE value="Creado nivelFacil.fxml y su ControladorNivelFacil.java&#10;Creado nivelMedio.fxml y su ControladorNivelMedio.java&#10;Creado nivelDificil.fxml y su ControladorNivelDificil.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creado nivelFacil.fxml y su ControladorNivelFacil.java&#10;Creado nivelMedio.fxml y su ControladorNivelMedio.java&#10;Creado nivelDificil.fxml y su ControladorNivelDificil.java" />
+    <MESSAGE value="Creados paquetes para separar por niveles de dificultad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creados paquetes para separar por niveles de dificultad" />
   </component>
 </project>
