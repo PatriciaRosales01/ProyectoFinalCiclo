@@ -1,4 +1,4 @@
-package proyecto;
+package proyecto.nivelDificil;
 
 public class ControladorNivelDificil {
 }

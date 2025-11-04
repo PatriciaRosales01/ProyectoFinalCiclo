@@ -32,19 +32,19 @@ public class ControladorDificultad {
     @FXML
     private void facil(ActionEvent event) {
         System.out.println("Modo fácil seleccionado");
-        abrirVentana("/nivelFacil.fxml", "Nivel fácil", event);
+        abrirVentana("/nivelFacil/nivelFacil.fxml", "Nivel fácil", event);
     }
 
     @FXML
     private void medio(ActionEvent event) {
         System.out.println("Modo medio seleccionado");
-        abrirVentana("/nivelMedio.fxml", "Nivel medio", event);
+        abrirVentana("/nivelMedio/nivelMedio.fxml", "Nivel medio", event);
     }
 
     @FXML
     private void dificil(ActionEvent event) {
         System.out.println("Modo difícil seleccionado");
-        abrirVentana("/nivelDificil.fxml", "Nivel difícil", event);
+        abrirVentana("/nivelDificil/nivelDificil.fxml", "Nivel difícil", event);
     }
 
     private void abrirVentana(String fxml, String titulo, ActionEvent event) {
