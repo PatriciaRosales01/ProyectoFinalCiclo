@@ -12,11 +12,21 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ControladorInicio {
+
     @FXML
     private TextField nombreUsuario;
 
     @FXML
     private void aceptar(ActionEvent event) {
-
+        try {
+            Parent parent = FXMLLoader.load(getClass().getResource("/dificultad.fxml"));
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(parent));
+            stage.setTitle("Opciones");
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

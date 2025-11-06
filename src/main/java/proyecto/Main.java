@@ -13,6 +13,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        DatabaseService db = new DatabaseService();
+        db.inicializarBaseDeDatos();
+
         Parent root = FXMLLoader.load(getClass().getResource("/inicio.fxml"));
         stage.setTitle("Aprende Idiomas");
         stage.setScene(new Scene(root));
