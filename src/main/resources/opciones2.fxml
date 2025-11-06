@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="340.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.Opciones2Controlador">
+   <children>
+      <Label layoutX="167.0" layoutY="43.0" text="Escoge una opción">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="182.0" layoutY="106.0" mnemonicParsing="false" onAction="#nivelFacil" text="Nivel fácil" />
+      <RadioButton layoutX="180.0" layoutY="143.0" mnemonicParsing="false" onAction="#nivelMedio" text="Nivel medio" />
+      <RadioButton layoutX="181.0" layoutY="182.0" mnemonicParsing="false" onAction="#nivelDificil" text="Nivel difícil" />
+      <RadioButton layoutX="183.0" layoutY="244.0" mnemonicParsing="false" onAction="#verResultados" text="Resultados" />
+   </children>
+</AnchorPane>
