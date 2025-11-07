@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import proyecto.DatabaseService;
+import proyecto.Resultados;
 
 import java.io.IOException;
 import java.util.*;
@@ -104,14 +105,29 @@ public class ControladorEspacio {
 
     @FXML
     void comprobar() {
-        String respuestaUsuario = txtRespuesta.getText().trim();
+        if (fraseActual == null) return;
 
-        if (respuestaUsuario.isEmpty()) {
-            lblResultado.setText("Introduce una respuesta.");
-        } else {
-            lblResultado.setText(""); // No mostrar correcto/incorrecto
+        String respuestaUsuario = txtRespuesta.getText().trim();
+        boolean correcto = respuestaUsuario.equalsIgnoreCase(fraseActual.respuesta);
+
+        switch (fraseActual.idioma.toLowerCase()) {
+            case "es":
+                if (correcto) Resultados.setAciertosEspañol(Resultados.getAciertosEspañol() + 1);
+                else Resultados.setFallosEspañol(Resultados.getFallosEspañol() + 1);
+                break;
+
+            case "en":
+                if (correcto) Resultados.setAciertosIngles(Resultados.getAciertosIngles() + 1);
+                else Resultados.setFallosIngles(Resultados.getFallosIngles() + 1);
+                break;
+
+            case "fr":
+                if (correcto) Resultados.setAciertosFrances(Resultados.getAciertosFrances() + 1);
+                else Resultados.setFallosFrances(Resultados.getFallosFrances() + 1);
+                break;
         }
     }
+
 
     private void mostrarError(String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.ERROR);
