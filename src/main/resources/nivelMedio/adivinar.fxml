@@ -6,7 +6,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.nivelMedio.ControladorAdivinar">
+<AnchorPane prefHeight="400.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="proyecto.nivelMedio.ControladorAdivinar">
     <children>
         <Label layoutX="190.0" layoutY="34.0" text="Adivinar palabra">
             <font>

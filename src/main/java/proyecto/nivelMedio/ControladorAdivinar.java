@@ -14,10 +14,7 @@ import proyecto.Palabra;
 import proyecto.Resultados;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -50,26 +47,25 @@ public class ControladorAdivinar {
         DatabaseService db = new DatabaseService();
         listaPalabras = new ArrayList<>();
 
+        String sql = "SELECT pista, respuesta_es, respuesta_en, respuesta_fr FROM adivinar";
+
         try (Connection conn = db.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT pista, respuesta, idioma FROM adivinar");
+             PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
 
             while (rs.next()) {
                 Palabra p = new Palabra();
                 p.setPista(rs.getString("pista"));
-                p.setPalabra(rs.getString("respuesta"));
-                p.setTraduccion("");
+                p.setTraduccion(rs.getString("respuesta_es") + "," +
+                        rs.getString("respuesta_en") + "," +
+                        rs.getString("respuesta_fr"));
                 listaPalabras.add(p);
             }
 
-            System.out.println("Se cargaron " + listaPalabras.size() + " elementos desde la tabla 'adivinar'.");
-
         } catch (SQLException e) {
             e.printStackTrace();
-            System.err.println("Error al cargar datos desde la tabla adivinar.");
         }
     }
-
 
     private void nuevaPalabra() {
         if (!listaPalabras.isEmpty()) {
@@ -81,17 +77,16 @@ public class ControladorAdivinar {
             ingles.clear();
             frances.clear();
         } else {
-            frase.setText("Has terminado todas las palabras. Pulsa aceptar para volver al menú.");
+            frase.setText("Has terminado todas las palabras.");
             español.setDisable(true);
             ingles.setDisable(true);
             frances.setDisable(true);
         }
     }
 
-
     @FXML
     void aceptarComprobar(ActionEvent event) {
-        comprobar(event);
+        comprobar();
         aceptar(event);
     }
 
@@ -109,16 +104,30 @@ public class ControladorAdivinar {
     }
 
     @FXML
-    void comprobar(ActionEvent event) {
-        String respuestaUsuario = español.getText().trim();
+    void comprobar() {
+        String[] respuestas = palabraActual.getTraduccion().split(",");
+        String españolCorrecto = respuestas[0].trim();
+        String inglesCorrecto = respuestas[1].trim();
+        String francesCorrecto = respuestas[2].trim();
 
-        if (respuestaUsuario.equalsIgnoreCase(palabraActual.getPalabra())) {
+        if (español.getText().trim().equalsIgnoreCase(españolCorrecto)) {
             Resultados.setAciertosEspañol(Resultados.getAciertosEspañol() + 1);
         } else {
             Resultados.setFallosEspañol(Resultados.getFallosEspañol() + 1);
         }
 
+        if (ingles.getText().trim().equalsIgnoreCase(inglesCorrecto)) {
+            Resultados.setAciertosIngles(Resultados.getAciertosIngles() + 1);
+        } else {
+            Resultados.setFallosIngles(Resultados.getFallosIngles() + 1);
+        }
+
+        if (frances.getText().trim().equalsIgnoreCase(francesCorrecto)) {
+            Resultados.setAciertosFrances(Resultados.getAciertosFrances() + 1);
+        } else {
+            Resultados.setFallosFrances(Resultados.getFallosFrances() + 1);
+        }
+
         nuevaPalabra();
     }
-
 }
