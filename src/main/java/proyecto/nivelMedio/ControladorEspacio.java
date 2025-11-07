@@ -92,6 +92,8 @@ public class ControladorEspacio {
 
     @FXML
     void aceptar(ActionEvent event) {
+        new DatabaseService().guardarResultados();
+
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/opciones2.fxml"));
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -99,9 +101,10 @@ public class ControladorEspacio {
             stage.setTitle("Menú");
             stage.show();
         } catch (IOException e) {
-            mostrarError("Error al volver al menú: " + e.getMessage());
+            e.printStackTrace();
         }
     }
+
 
     @FXML
     void comprobar() {

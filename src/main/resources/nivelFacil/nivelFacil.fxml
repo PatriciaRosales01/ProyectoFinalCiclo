@@ -5,14 +5,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="340.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.nivelFacil.ControladorNivelFacil">
+<AnchorPane prefHeight="340.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="proyecto.nivelFacil.ControladorNivelFacil">
     <children>
         <Label layoutX="167.0" layoutY="56.0" text="Opciones para el nivel fácil">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <RadioButton layoutX="184.0" layoutY="141.0" mnemonicParsing="false" text="Traducir una palabra" />
-        <RadioButton layoutX="160.0" layoutY="185.0" mnemonicParsing="false" text="Seleccionar la opción correcta" />
+        <RadioButton layoutX="184.0" layoutY="141.0" mnemonicParsing="false" onAction="#traducir" text="Traducir una palabra" />
+        <RadioButton layoutX="160.0" layoutY="185.0" mnemonicParsing="false" onAction="#seleccionar" text="Seleccionar la opción correcta" />
     </children>
 </AnchorPane>

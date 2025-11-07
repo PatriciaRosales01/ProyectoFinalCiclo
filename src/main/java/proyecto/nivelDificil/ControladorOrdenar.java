@@ -142,17 +142,19 @@ public class ControladorOrdenar {
 
     @FXML
     void aceptar(ActionEvent event) {
+        new DatabaseService().guardarResultados();
+
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/opciones2.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(parent));
             stage.setTitle("Menú");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Error al cargar el menú: " + e.getMessage());
         }
     }
+
 
     @FXML
     void comprobar() {

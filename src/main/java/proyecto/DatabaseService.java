@@ -103,7 +103,6 @@ public class DatabaseService {
 
     private void insertarDatosIniciales(Statement stmt) throws SQLException {
 
-        // ------------------- COLUMNAS (20 palabras) -------------------
         ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM columnas");
         rs.next();
         if (rs.getInt(1) == 0) {
@@ -132,7 +131,6 @@ public class DatabaseService {
         """);
         }
 
-        // ------------------- ESCOGER (20 palabras distintas) -------------------
         rs = stmt.executeQuery("SELECT COUNT(*) FROM escoger");
         rs.next();
         if (rs.getInt(1) == 0) {
@@ -161,7 +159,6 @@ public class DatabaseService {
         """);
         }
 
-        // ------------------- ORDENAR (20 frases) -------------------
         rs = stmt.executeQuery("SELECT COUNT(*) FROM ordenar");
         rs.next();
         if (rs.getInt(1) == 0) {
@@ -190,7 +187,6 @@ public class DatabaseService {
         """);
         }
 
-        // ------------------- ESPACIO (20 frases) -------------------
         rs = stmt.executeQuery("SELECT COUNT(*) FROM espacio");
         rs.next();
         if (rs.getInt(1) == 0) {
@@ -219,7 +215,6 @@ public class DatabaseService {
         """);
         }
 
-        // ------------------- TRADUCIR (20 palabras) -------------------
         rs = stmt.executeQuery("SELECT COUNT(*) FROM traducir");
         rs.next();
         if (rs.getInt(1) == 0) {
@@ -248,8 +243,6 @@ public class DatabaseService {
     """);
         }
 
-
-        // ------------------- ADIVINAR (20 pistas multidioma) -------------------
         rs = stmt.executeQuery("SELECT COUNT(*) FROM adivinar");
         rs.next();
         if (rs.getInt(1) == 0) {
@@ -326,4 +319,75 @@ public class DatabaseService {
 
         return lista;
     }
+
+
+
+
+
+    public void guardarResultados() {
+        String sqlSelect = "SELECT COUNT(*) FROM resultados";
+        String sqlInsert = """
+        INSERT INTO resultados (aciertos_es, fallos_es, aciertos_en, fallos_en, aciertos_fr, fallos_fr)
+        VALUES (?, ?, ?, ?, ?, ?)
+        """;
+        String sqlUpdate = """
+        UPDATE resultados SET
+        aciertos_es = ?, fallos_es = ?, aciertos_en = ?, fallos_en = ?, aciertos_fr = ?, fallos_fr = ?
+        """;
+
+        try (Connection conn = getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sqlSelect)) {
+
+            rs.next();
+            boolean hayRegistro = rs.getInt(1) > 0;
+
+            PreparedStatement ps;
+            if (hayRegistro) {
+                ps = conn.prepareStatement(sqlUpdate);
+            } else {
+                ps = conn.prepareStatement(sqlInsert);
+            }
+
+            ps.setInt(1, Resultados.getAciertosEspañol());
+            ps.setInt(2, Resultados.getFallosEspañol());
+            ps.setInt(3, Resultados.getAciertosIngles());
+            ps.setInt(4, Resultados.getFallosIngles());
+            ps.setInt(5, Resultados.getAciertosFrances());
+            ps.setInt(6, Resultados.getFallosFrances());
+
+            ps.executeUpdate();
+            ps.close();
+
+            System.out.println("✅ Resultados guardados en la base de datos.");
+
+        } catch (SQLException e) {
+            System.err.println("Error al guardar resultados: " + e.getMessage());
+        }
+    }
+
+
+    public void cargarResultados() {
+        String sql = "SELECT aciertos_es, fallos_es, aciertos_en, fallos_en, aciertos_fr, fallos_fr FROM resultados LIMIT 1";
+
+        try (Connection conn = this.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            if (rs.next()) {
+                Resultados.setAciertosEspañol(rs.getInt("aciertos_es"));
+                Resultados.setFallosEspañol(rs.getInt("fallos_es"));
+                Resultados.setAciertosIngles(rs.getInt("aciertos_en"));
+                Resultados.setFallosIngles(rs.getInt("fallos_en"));
+                Resultados.setAciertosFrances(rs.getInt("aciertos_fr"));
+                Resultados.setFallosFrances(rs.getInt("fallos_fr"));
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error cargando resultados: " + e.getMessage());
+        }
+    }
+
+
+
 }

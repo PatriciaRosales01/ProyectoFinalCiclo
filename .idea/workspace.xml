@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="Actualizados ControladorEspacio.java y ControladorOrdenar.java para añadir la suma de los resultados">
+      <change afterPath="$PROJECT_DIR$/src/main/java/proyecto/Palabra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/proyecto/ResultadoControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/proyecto/Resultados.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resultado.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorColumnas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorColumnas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorOrdenar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorOrdenar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorEscoger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorEscoger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorTraduccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorTraduccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorAdivinar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorAdivinar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorEspacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorEspacio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelDificil/nivelDificil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelDificil/nivelDificil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelFacil/nivelFacil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelFacil/nivelFacil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelMedio/nivelMedio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelMedio/nivelMedio.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -45,33 +59,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/patri/Desktop/ProyectoFinalCiclo/src/main/java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.6&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/patri/Desktop/ProyectoFinalCiclo/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15429688",
+    "project.structure.side.proportion": "0.6",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\resources" />
+      <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\java\proyecto" />
       <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\java\proyecto\nivelFacil" />
       <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\resources\nivelMedio" />
       <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\resources\nivelFacil" />
       <recent name="C:\Users\patri\Desktop\ProyectoFinalCiclo\src\main\resources\nivelDificil" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="proyecto" />
     </key>
   </component>
   <component name="RunManager">
@@ -145,7 +165,87 @@
       <option name="project" value="LOCAL" />
       <updated>1762256480720</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Creados los restantes fxml:&#10;adivinar.fxml, columnas.fxml, escoger.fxml, espacio.fxml, ordenar.fxml y traduccion.fxml&#10;y sus respectivos controladores:&#10;ControladorAdivinar.java, ControladorColumnas.java, ControladorEscoger.java, ControladorEspacio.java, ControladorOrdenar.java y ControladorTraduccion.java">
+      <option name="closed" value="true" />
+      <created>1762275767561</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762275767561</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Creado DatabaseService.java para la base de datos&#10;Modificado Main.java para incluir DatabaseService&#10;Creado y completado ControladorInicio.java">
+      <option name="closed" value="true" />
+      <created>1762440624066</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762440624066</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Completados ControladorNivelDificil.java, ControladorNivelMedio.java y ControladorNivelDificil.java">
+      <option name="closed" value="true" />
+      <created>1762442315496</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762442315496</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Creados y completados opciones2.fxml y Opciones2Controlador.java&#10;Completados ControladorAdivinar.java y ControladorTraduccion.java">
+      <option name="closed" value="true" />
+      <created>1762448023725</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1762448023725</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Completado ControladorEspacio.java">
+      <option name="closed" value="true" />
+      <created>1762530667976</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1762530667976</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Completado ControladorAdivinar.java">
+      <option name="closed" value="true" />
+      <created>1762532255735</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762532255735</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Completado ControladorColumnas.java">
+      <option name="closed" value="true" />
+      <created>1762533841790</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762533841790</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Completado ControladorEscoger.java">
+      <option name="closed" value="true" />
+      <created>1762540276953</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1762540276953</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Modificado DatabaseService.java para la creación de la base de datos con las tablas para cada controlador">
+      <option name="closed" value="true" />
+      <created>1762541928851</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762541928851</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Actualizados ControladorEspacio.java y ControladorOrdenar.java para añadir la suma de los resultados">
+      <option name="closed" value="true" />
+      <created>1762542214375</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762542214375</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +266,17 @@
     <MESSAGE value="Creado dificultad.fxml para la ventana principal y su ControladorDificultad.java" />
     <MESSAGE value="Creado nivelFacil.fxml y su ControladorNivelFacil.java&#10;Creado nivelMedio.fxml y su ControladorNivelMedio.java&#10;Creado nivelDificil.fxml y su ControladorNivelDificil.java" />
     <MESSAGE value="Creados paquetes para separar por niveles de dificultad" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creados paquetes para separar por niveles de dificultad" />
+    <MESSAGE value="Creados los restantes fxml:&#10;adivinar.fxml, columnas.fxml, escoger.fxml, espacio.fxml, ordenar.fxml y traduccion.fxml&#10;y sus respectivos controladores:&#10;ControladorAdivinar.java, ControladorColumnas.java, ControladorEscoger.java, ControladorEspacio.java, ControladorOrdenar.java y ControladorTraduccion.java" />
+    <MESSAGE value="Creado DatabaseService.java para la base de datos&#10;Modificado Main.java para incluir DatabaseService&#10;Creado ControladorInicio.java" />
+    <MESSAGE value="Creado DatabaseService.java para la base de datos&#10;Modificado Main.java para incluir DatabaseService&#10;Creado y completado ControladorInicio.java" />
+    <MESSAGE value="Completados ControladorNivelDificil.java, ControladorNivelMedio.java y ControladorNivelDificil.java" />
+    <MESSAGE value="Creados y completados opciones2.fxml y Opciones2Controlador.java&#10;Completados ControladorAdivinar.java y ControladorTraduccion.java" />
+    <MESSAGE value="Completado ControladorEspacio.java" />
+    <MESSAGE value="Completado ControladorAdivinar.java" />
+    <MESSAGE value="Completado ControladorColumnas.java" />
+    <MESSAGE value="Completado ControladorEscoger.java" />
+    <MESSAGE value="Modificado DatabaseService.java para la creación de la base de datos con las tablas para cada controlador" />
+    <MESSAGE value="Actualizados ControladorEspacio.java y ControladorOrdenar.java para añadir la suma de los resultados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizados ControladorEspacio.java y ControladorOrdenar.java para añadir la suma de los resultados" />
   </component>
 </project>

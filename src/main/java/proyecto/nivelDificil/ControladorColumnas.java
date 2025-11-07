@@ -53,7 +53,7 @@ public class ControladorColumnas {
         DatabaseService db = new DatabaseService();
         listaPalabras.clear();
 
-        String sql = "SELECT palabra_es, traduccion_en, traduccion_fr FROM traducir";
+        String sql = "SELECT palabra_es, palabra_en, palabra_fr FROM columnas";
 
         try (Connection conn = db.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql);
@@ -62,7 +62,7 @@ public class ControladorColumnas {
             while (rs.next()) {
                 Palabra p = new Palabra();
                 p.setPalabra(rs.getString("palabra_es"));
-                p.setTraduccion(rs.getString("traduccion_en") + "," + rs.getString("traduccion_fr"));
+                p.setTraduccion(rs.getString("palabra_en") + "," + rs.getString("palabra_fr"));
                 listaPalabras.add(p);
             }
 
@@ -116,6 +116,8 @@ public class ControladorColumnas {
 
     @FXML
     void aceptar(ActionEvent event) {
+        new DatabaseService().guardarResultados();
+
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/opciones2.fxml"));
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -126,6 +128,7 @@ public class ControladorColumnas {
             e.printStackTrace();
         }
     }
+
 
     @FXML
     void comprobar() {

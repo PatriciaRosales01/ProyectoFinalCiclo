@@ -92,6 +92,8 @@ public class ControladorAdivinar {
 
     @FXML
     void aceptar(ActionEvent event) {
+        new DatabaseService().guardarResultados();
+
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/opciones2.fxml"));
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -102,6 +104,7 @@ public class ControladorAdivinar {
             e.printStackTrace();
         }
     }
+
 
     @FXML
     void comprobar() {
