@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="Actualizados ControladorEspacio.java y ControladorOrdenar.java para añadir la suma de los resultados">
+    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/ControladorDificultad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/ControladorDificultad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/ControladorInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/ControladorInicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/Opciones2Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/Opciones2Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/ResultadoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/ResultadoControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorColumnas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorColumnas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorNivelDificil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorNivelDificil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorOrdenar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorOrdenar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorEscoger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorEscoger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorNivelFacil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorNivelFacil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorTraduccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorTraduccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorAdivinar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorAdivinar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762542214375</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Añadidos comentarios solo para cada clase">
+      <option name="closed" value="true" />
+      <created>1762951153718</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762951153718</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,6 +277,7 @@
     <MESSAGE value="Completado ControladorEscoger.java" />
     <MESSAGE value="Modificado DatabaseService.java para la creación de la base de datos con las tablas para cada controlador" />
     <MESSAGE value="Actualizados ControladorEspacio.java y ControladorOrdenar.java para añadir la suma de los resultados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizados ControladorEspacio.java y ControladorOrdenar.java para añadir la suma de los resultados" />
+    <MESSAGE value="Añadidos comentarios solo para cada clase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadidos comentarios solo para cada clase" />
   </component>
 </project>

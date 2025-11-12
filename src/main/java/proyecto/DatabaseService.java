@@ -21,10 +21,12 @@ public class DatabaseService {
     private static final String USER = "root";
     private static final String PASSWORD = "abc123.";
 
+    /**Establece y devuelve la conexión de la base de datos*/
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 
+    /**Inicializa la base de datos creando las tablas necesarias*/
     public void inicializarBaseDeDatos() {
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/", USER, PASSWORD);
              Statement stmt = conn.createStatement()) {
@@ -110,6 +112,7 @@ public class DatabaseService {
         }
     }
 
+    /**Inserta los datos iniciales en las tablas de la base de datos*/
     private void insertarDatosIniciales(Statement stmt) throws SQLException {
 
         ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM columnas");
@@ -282,7 +285,7 @@ public class DatabaseService {
     }
 
 
-
+    /**Obtiene la lista de frases para el ejercicio de ordenar palabras*/
     public List<ControladorOrdenar.Frase> obtenerFrasesOrdenar() {
         List<ControladorOrdenar.Frase> frases = new ArrayList<>();
 
@@ -306,6 +309,7 @@ public class DatabaseService {
         return frases;
     }
 
+    /**Obtiene la lista de frases para el ejercicio de completar espacios*/
     public List<ControladorEspacio.Frase> obtenerFrasesCompletar() {
         List<ControladorEspacio.Frase> lista = new ArrayList<>();
 
@@ -331,8 +335,7 @@ public class DatabaseService {
 
 
 
-
-
+    /**Guarda los resultados actuales de aciertos y fallos*/
     public void guardarResultados() {
         String sqlSelect = "SELECT COUNT(*) FROM resultados";
         String sqlInsert = """
@@ -375,7 +378,7 @@ public class DatabaseService {
         }
     }
 
-
+    /**Carga los resultados de aciertos y fallos*/
     public void cargarResultados() {
         String sql = "SELECT aciertos_es, fallos_es, aciertos_en, fallos_en, aciertos_fr, fallos_fr FROM resultados LIMIT 1";
 

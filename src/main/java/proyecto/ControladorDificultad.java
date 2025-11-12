@@ -29,6 +29,8 @@ public class ControladorDificultad {
 
     private ToggleGroup grupoDificultad;
 
+    /**Inicializa el grupo de botones de la dificultad y que solo
+     * se pueda seleccionar uno*/
     @FXML
     public void initialize() {
         grupoDificultad = new ToggleGroup();
@@ -38,24 +40,28 @@ public class ControladorDificultad {
         dificil.setToggleGroup(grupoDificultad);
     }
 
+    /**Maneja la selección del modo fácil y abre la ventana correspondiente*/
     @FXML
     private void facil(ActionEvent event) {
         System.out.println("Modo fácil seleccionado");
         abrirVentana("/nivelFacil/nivelFacil.fxml", "Nivel fácil", event);
     }
 
+    /**Maneja la selección del modo medio y abre la ventana correspondiente*/
     @FXML
     private void medio(ActionEvent event) {
         System.out.println("Modo medio seleccionado");
         abrirVentana("/nivelMedio/nivelMedio.fxml", "Nivel medio", event);
     }
 
+    /**Maneja la selección del modo difícil y abre la ventana correspondiente*/
     @FXML
     private void dificil(ActionEvent event) {
         System.out.println("Modo difícil seleccionado");
         abrirVentana("/nivelDificil/nivelDificil.fxml", "Nivel difícil", event);
     }
 
+    /**Método auxiliar para cargar un nuevo FXMl en la ventana actual*/
     private void abrirVentana(String fxml, String titulo, ActionEvent event) {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource(fxml));

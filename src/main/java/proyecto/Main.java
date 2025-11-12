@@ -19,6 +19,7 @@ public class Main extends Application {
         launch(args);
     }
 
+    /**Inicializa la base de datos, carga los datos y muestra la ventana inicial*/
     @Override
     public void start(Stage stage) throws Exception {
         DatabaseService db = new DatabaseService();

@@ -23,10 +23,10 @@ public class ResultadoControlador {
     @FXML
     private Label nombre;
 
+    /**Inicializa el controlador. Carga los resultados desde la base de datos
+     * y los muestra en un gráfico de barras para cada idioma*/
     @FXML
     public void initialize() {
-
-        // Primero cargar datos desde la base de datos
         new DatabaseService().cargarResultados();
 
         grafico.getData().clear();
@@ -74,7 +74,7 @@ public class ResultadoControlador {
         });
     }
 
-
+    /**Cierra la aplicación*/
     @FXML
     void salir() {
         Platform.exit();
