@@ -1,3 +1,12 @@
+/**
+ * Clase: ResultadoControlador
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana resultado.fxml,
+ * encargada de mostrar los resultados de los ejercicios en un
+ * gráfico de barras para español, inglés y francés
+ * */
+
 package proyecto;
 
 import javafx.application.Platform;

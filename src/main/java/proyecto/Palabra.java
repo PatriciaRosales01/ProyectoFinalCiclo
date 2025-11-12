@@ -1,8 +1,16 @@
+/**
+ * Clase: Palabra
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Representa una palabra en un idioma determinado,
+ * incluyendo una traducción y una pista. Proporciona métodos
+ * para acceder y modificar sus atributos
+ * */
+
 package proyecto;
 
 public class Palabra {
     private int id;
-    private String idioma;
     private String palabra;
     private String traduccion;
     private String pista;
@@ -13,14 +21,6 @@ public class Palabra {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getIdioma() {
-        return idioma;
-    }
-
-    public void setIdioma(String idioma) {
-        this.idioma = idioma;
     }
 
     public String getPalabra() {

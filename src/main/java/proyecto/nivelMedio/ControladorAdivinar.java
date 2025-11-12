@@ -1,3 +1,12 @@
+/**
+ * Clase: ControladorAdivinar
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana adivinar.fxml,
+ * encargada de mostrar una pista y que el usuario adivine la palabra
+ * correcta en español, inglés y francés
+ * */
+
 package proyecto.nivelMedio;
 
 import javafx.event.ActionEvent;

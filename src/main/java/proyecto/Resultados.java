@@ -1,3 +1,13 @@
+/**
+ * Clase: Resultados
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Clase que mantiene los resultados acumulados de
+ * los ejercicios por idioma. Almacena los aciertos y fallos de
+ * cada idioma y proporciona métodos estáticos para acceder y
+ * modificarlos
+ * */
+
 package proyecto;
 
 public class Resultados {

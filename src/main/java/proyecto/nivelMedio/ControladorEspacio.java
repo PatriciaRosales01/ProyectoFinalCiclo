@@ -1,3 +1,12 @@
+/**
+ * Clase: ControladorEspacio
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana espacio.fxml,
+ * encargada de mostrar frases con un espacio en blanco que el
+ * usuario tiene que completar de forma correcta según el idioma
+ * */
+
 package proyecto.nivelMedio;
 
 import javafx.event.ActionEvent;

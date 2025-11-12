@@ -1,3 +1,12 @@
+/**
+ * Clase: ControladorOrdenar
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana ordenar.fxml,
+ * encargada de mostrar frases desordenadas y que el usuario las
+ * ordene correctamente
+ * */
+
 package proyecto.nivelDificil;
 
 import javafx.event.ActionEvent;

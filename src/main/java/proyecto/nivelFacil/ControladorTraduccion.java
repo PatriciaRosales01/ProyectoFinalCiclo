@@ -1,3 +1,12 @@
+/**
+ * Clase: ControladorTraduccion
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana traduccion.fxml,
+ * encargada de mostrar una palabra en un idioma y el usuario tiene
+ * que escribir su traducción en inglés y en francés
+ * */
+
 package proyecto.nivelFacil;
 
 import javafx.event.ActionEvent;

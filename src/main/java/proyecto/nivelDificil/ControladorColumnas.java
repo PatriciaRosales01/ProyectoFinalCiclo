@@ -1,3 +1,12 @@
+/**
+ * Clase: ControladorColumnas
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana columnas.fxml,
+ * encargada de mostrar distintas palabras en columnas y permitir
+ * al usuario seleccionar la traducción correcta en cada idioma
+ * */
+
 package proyecto.nivelDificil;
 
 import javafx.event.ActionEvent;
@@ -128,6 +137,7 @@ public class ControladorColumnas {
             e.printStackTrace();
         }
     }
+
 
 
     @FXML

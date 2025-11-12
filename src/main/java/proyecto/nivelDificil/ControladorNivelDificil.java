@@ -1,3 +1,12 @@
+/**
+ * Clase: ControladorNivelDifícil
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana nivelDificil.fxml,
+ * encargada de mostrar las actividades que hay en ese nivel para
+ * que el usuario escoja una de ellas
+ * */
+
 package proyecto.nivelDificil;
 
 import javafx.event.ActionEvent;

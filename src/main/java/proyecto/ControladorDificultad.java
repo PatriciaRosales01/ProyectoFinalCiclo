@@ -1,3 +1,12 @@
+/**
+ * Clase: ControladorDificultad
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana dificultad.fxml,
+ * encargada de mostrar los niveles de dificultad disponibles y
+ * permite al usuario seleccionar uno antes de la actividad
+ * */
+
 package proyecto;
 
 import javafx.event.ActionEvent;

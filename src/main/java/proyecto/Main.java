@@ -1,3 +1,11 @@
+/**
+ * Clase: Main
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Clase principal que inicia JavaFx, carga la ventana
+ * principal y establece el flujo inicial de la interfaz
+ * */
+
 package proyecto;
 
 import javafx.application.Application;

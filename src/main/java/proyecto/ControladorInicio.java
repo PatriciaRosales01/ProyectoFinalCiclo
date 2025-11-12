@@ -1,3 +1,13 @@
+/**
+ * Clase: ControladorInicio
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana inicio.fxml,
+ * encargada de mostrar la pantalla principal del programa, desde
+ * la que el usuario puede acceder a los diferentes niveles y
+ * actividades
+ * */
+
 package proyecto;
 
 import javafx.event.ActionEvent;

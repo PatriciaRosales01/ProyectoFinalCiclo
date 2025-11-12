@@ -1,3 +1,13 @@
+/**
+ * Clase: ControladorEscoger
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana escoger.fxml,
+ * encargada de mostrar una palabra en español y que el usuario
+ * seleccione su traducción correcta en inglés y en francés
+ * desde listas (ComboBox)
+ * */
+
 package proyecto.nivelFacil;
 
 import javafx.event.ActionEvent;

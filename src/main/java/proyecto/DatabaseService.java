@@ -1,3 +1,12 @@
+/**
+ * Clase: ResultadoControlador
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador encargado de la gestión de la base de
+ * datos. Se encarga de inicializar la base de datos y sus tablas,
+ * insertar los distintos datos dependiendo de cada actividad
+ * */
+
 package proyecto;
 
 import proyecto.nivelMedio.ControladorEspacio;
@@ -94,7 +103,7 @@ public class DatabaseService {
 
             insertarDatosIniciales(stmt);
 
-            System.out.println("✅ Base de datos inicializada correctamente.");
+            System.out.println("Base de datos inicializada correctamente.");
 
         } catch (SQLException e) {
             System.err.println("Error al inicializar base de datos: " + e.getMessage());
@@ -359,7 +368,7 @@ public class DatabaseService {
             ps.executeUpdate();
             ps.close();
 
-            System.out.println("✅ Resultados guardados en la base de datos.");
+            System.out.println("Resultados guardados en la base de datos.");
 
         } catch (SQLException e) {
             System.err.println("Error al guardar resultados: " + e.getMessage());

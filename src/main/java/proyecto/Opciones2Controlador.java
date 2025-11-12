@@ -1,3 +1,13 @@
+/**
+ * Clase: Opciones2Controlador
+ * Autor: Patricia Rosales
+ * Fecha: Octubre-Noviembre 2025
+ * Descripción: Controlador que gestiona la ventana opciones2.fxml,
+ * encargada de mostrar los niveles de dificultad disponibles y
+ * permite al usuario seleccionar uno antes de la actividad. También
+ * inlcuye a mayores la opción para ver los resultados
+ * */
+
 package proyecto;
 
 import javafx.event.ActionEvent;
