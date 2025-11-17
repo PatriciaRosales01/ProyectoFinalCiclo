@@ -49,6 +49,7 @@ public class ControladorEspacio {
         }
     }
 
+    /**Inicializa la ventana cargando las palabras desde la base de datos*/
     @FXML
     public void initialize() {
         frases = databaseService.obtenerFrasesCompletar();
@@ -66,6 +67,7 @@ public class ControladorEspacio {
         btnOtraFrase.setOnAction(event -> mostrarNuevaFrase());
     }
 
+    /**Muestra una frase aleatoria disponible y limpia el campo de respuesta*/
     private void mostrarFraseAleatoria() {
         Random random = new Random();
         fraseActual = frases.get(random.nextInt(frases.size()));
@@ -73,6 +75,7 @@ public class ControladorEspacio {
         txtRespuesta.clear();
     }
 
+    /**Guarda si la frase anterior fue correcta o no y muestra una nueva*/
     private void mostrarNuevaFrase() {
         if (fraseActual != null) {
             String respuestaUsuario = txtRespuesta.getText().trim().toLowerCase();
@@ -93,12 +96,14 @@ public class ControladorEspacio {
         mostrarFraseAleatoria();
     }
 
+    /**Combinación de los métodos aceptar y comprobar*/
     @FXML
     void aceptarComprobar(ActionEvent event) {
         comprobar();
         aceptar(event);
     }
 
+    /**Guarda los resultados en la base de datos y vuelve al menú*/
     @FXML
     void aceptar(ActionEvent event) {
         new DatabaseService().guardarResultados();
@@ -114,7 +119,7 @@ public class ControladorEspacio {
         }
     }
 
-
+    /**Comprueba si la respuesta es correcta y actualiza los contadores*/
     @FXML
     void comprobar() {
         if (fraseActual == null) return;
@@ -140,11 +145,4 @@ public class ControladorEspacio {
         }
     }
 
-
-    private void mostrarError(String mensaje) {
-        Alert alerta = new Alert(Alert.AlertType.ERROR);
-        alerta.setHeaderText("Error");
-        alerta.setContentText(mensaje);
-        alerta.showAndWait();
-    }
 }

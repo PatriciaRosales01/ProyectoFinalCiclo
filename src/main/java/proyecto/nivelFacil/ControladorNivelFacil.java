@@ -20,18 +20,21 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ControladorNivelFacil {
+    /**Abre la actividad 'Seleccionar la opción correcta'*/
     @FXML
     void seleccionar(ActionEvent event) {
         System.out.println("Seleccionar opción correcta");
         abrirVentana("/nivelFacil/escoger.fxml", "Nivel fácil", event);
     }
 
+    /**Abre la actividad 'Traducción directa'*/
     @FXML
     void traducir(ActionEvent event) {
         System.out.println("Traducción directa");
         abrirVentana("/nivelFacil/traduccion.fxml", "Nivel fácil", event);
     }
 
+    /**Carga y muestra una nueva ventana según el FXML indicado*/
     private void abrirVentana(String fxml, String titulo, ActionEvent event) {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource(fxml));

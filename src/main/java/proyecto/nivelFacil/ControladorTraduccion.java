@@ -43,12 +43,14 @@ public class ControladorTraduccion {
     private Palabra palabraActual;
     private Random aleatorio = new Random();
 
+    /**Inicializa la ventana cargando las palabras desde la base de datos*/
     @FXML
     public void initialize() {
         cargarPalabrasDesdeBD();
         nuevaPalabra();
     }
 
+    /**Carga las palabras y sus traducciones desde la tabla traducir*/
     private void cargarPalabrasDesdeBD() {
         DatabaseService db = new DatabaseService();
         listaPalabras = new ArrayList<>();
@@ -73,7 +75,7 @@ public class ControladorTraduccion {
         }
     }
 
-
+    /**Selecciona una palabra aleatoria. Desactiva la entrada cuando se acaban las palabras*/
     private void nuevaPalabra() {
         if (!listaPalabras.isEmpty()) {
             int index = aleatorio.nextInt(listaPalabras.size());
@@ -89,12 +91,14 @@ public class ControladorTraduccion {
         }
     }
 
+    /**Combinación de los métodos aceptar y comprobar*/
     @FXML
     void aceptarComprobar(ActionEvent event) {
         comprobar();
         aceptar(event);
     }
 
+    /**Guarda los resultados y muestra la ventana del menú*/
     @FXML
     void aceptar(ActionEvent event) {
         new DatabaseService().guardarResultados();
@@ -110,7 +114,8 @@ public class ControladorTraduccion {
         }
     }
 
-
+    /**Comprueba si las traducciones introducidas coinciden con la correcta.
+     * Actualiza los aciertos y los fallos y carga la siguiente palabra*/
     @FXML
     void comprobar() {
         String[] traducciones = palabraActual.getTraduccion().split(",");
