@@ -45,12 +45,15 @@ public class ControladorEscoger {
     private Palabra palabraActual;
     private Random aleatorio = new Random();
 
+    /**Inicializa la ventana cargando las palabras desde la base de datos y mostrando
+     * la primera palabra al usuario*/
     @FXML
     public void initialize() {
         cargarPalabrasDesdeBD();
         nuevaPalabra();
     }
 
+    /**Carga todas las palabras de la tabla escoger y sus traducciones*/
     private void cargarPalabrasDesdeBD() {
         DatabaseService db = new DatabaseService();
         listaPalabras.clear();
@@ -73,6 +76,7 @@ public class ControladorEscoger {
         }
     }
 
+    /**Selecciona una palabra aleatoria, genera opciones en inglés y francés y actualiza los ComboBox*/
     private void nuevaPalabra() {
         if (listaPalabras.isEmpty()) {
             palabra.setText("Has terminado todas las palabras");
@@ -120,13 +124,14 @@ public class ControladorEscoger {
         comboBoxFrances.getSelectionModel().clearSelection();
     }
 
-
+    /**Combina los métodos aceptar y comprobar*/
     @FXML
     void aceptarComprobar(ActionEvent event) {
         comprobar();
         aceptar(event);
     }
 
+    /**Guarda los resultados acumulados en la base de datos y cambia la escena a la ventana del menú*/
     @FXML
     void aceptar(ActionEvent event) {
         new DatabaseService().guardarResultados();
@@ -142,7 +147,7 @@ public class ControladorEscoger {
         }
     }
 
-
+    /**Comprueba si las traducciones son correctas o no y muestra una palabra nueva*/
     @FXML
     void comprobar() {
         if (palabraActual == null) return;

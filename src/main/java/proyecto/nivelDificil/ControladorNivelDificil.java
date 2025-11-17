@@ -20,18 +20,21 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ControladorNivelDificil {
+    /**Abre la actividad 'Unir columnas'*/
     @FXML
     void columnas(ActionEvent event) {
         System.out.println("Unir columnas");
         abrirVentana("/nivelDificil/columnas.fxml", "Nivel dificil", event);
     }
 
+    /**Abre la actividad 'Ordenar palabras'*/
     @FXML
     void ordenar(ActionEvent event) {
         System.out.println("Ordenar palabras");
         abrirVentana("/nivelDificil/ordenar.fxml", "Nivel dificil", event);
     }
 
+    /**Carga y muestra una nueva ventana según el FXML indicado*/
     private void abrirVentana(String fxml, String titulo, ActionEvent event) {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource(fxml));

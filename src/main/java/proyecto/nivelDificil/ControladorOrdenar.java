@@ -50,6 +50,8 @@ public class ControladorOrdenar {
         }
     }
 
+    /**Inicializa el controlador. Carga las frases desde la base de datos,
+     * establece las acciones de los botones y muestra la primera frase*/
     @FXML
     public void initialize() {
         frases = databaseService.obtenerFrasesOrdenar();
@@ -68,6 +70,8 @@ public class ControladorOrdenar {
         botonMenu.setOnAction(this::aceptarComprobar);
     }
 
+    /**Establece la conexión con la base de datos para verificar la
+     * conexión. Muestra un mensaje de error si no se puede conectar*/
     private void conectarBD() {
         try {
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/idiomas", "root", "abc123.");
@@ -77,6 +81,8 @@ public class ControladorOrdenar {
         }
     }
 
+    /**Carga todas las frases disponibles desde la base de datos y las
+     * almacena en la lista de frases. Si hay errores muestra un mensaje*/
     private void cargarFrasesDesdeBD() {
         frases = new ArrayList<>();
 
@@ -99,8 +105,8 @@ public class ControladorOrdenar {
         }
     }
 
-
-
+    /**Muestra una frase aleatoria desordenada en pantalla. Si no quedan
+     * frases disponibles se desactiva el botón de 'siguiente'*/
     private void mostrarFraseAleatoria() {
         if (frases.isEmpty()) {
             lblInstruccion.setText("No hay más frases disponibles.");
@@ -134,8 +140,7 @@ public class ControladorOrdenar {
         }
     }
 
-
-
+    /**Muestra una ventana de alerta con un mensaje de error*/
     private void mostrarError(String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setHeaderText("Error");
@@ -143,12 +148,15 @@ public class ControladorOrdenar {
         alerta.showAndWait();
     }
 
+    /**Combinación de los métodos aceptar y comprobar*/
     @FXML
     void aceptarComprobar(ActionEvent event) {
         comprobar();
         aceptar(event);
     }
 
+    /**Guarda los resultados actuales en la base de datos y abre la
+     * ventana del menú*/
     @FXML
     void aceptar(ActionEvent event) {
         new DatabaseService().guardarResultados();
@@ -164,7 +172,7 @@ public class ControladorOrdenar {
         }
     }
 
-
+    /**Comprueba si la frase ordenada es correcta y muestra una frase nueva*/
     @FXML
     void comprobar() {
         if (fraseActual == null) {

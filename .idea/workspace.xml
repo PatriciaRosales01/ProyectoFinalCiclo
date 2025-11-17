@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/ControladorDificultad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/ControladorDificultad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/ControladorInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/ControladorInicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/Opciones2Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/Opciones2Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/ResultadoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/ResultadoControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorColumnas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorColumnas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorNivelDificil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorNivelDificil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorOrdenar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorOrdenar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorEscoger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorEscoger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

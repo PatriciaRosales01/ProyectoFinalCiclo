@@ -49,6 +49,8 @@ public class ControladorColumnas {
     private Palabra palabraActual;
     private Random aleatorio = new Random();
 
+    /**Inicializa el controlador. Carga las palabras desde la base de datos
+     * y muestra la primera palabra en las columnas y se asignan los botones*/
     @FXML
     public void initialize() {
         cargarPalabrasDesdeBD();
@@ -58,6 +60,7 @@ public class ControladorColumnas {
         botonSiguiente.setOnAction(event -> comprobar());
     }
 
+    /**Carga las palabras desde la base de datos en la lista de palabras*/
     private void cargarPalabrasDesdeBD() {
         DatabaseService db = new DatabaseService();
         listaPalabras.clear();
@@ -80,6 +83,9 @@ public class ControladorColumnas {
         }
     }
 
+    /**Selecciona una palabra al azar de la lista, muestra la palabra en español
+     * y mezcla las traducciones en inglés y francés. Si no quedan palabras
+     * desactiva los ListView y el botón para hacer más palabras*/
     private void nuevaPalabra() {
         if (listaPalabras.isEmpty()) {
             columnaEspañol.getItems().setAll("FIN");
@@ -117,12 +123,14 @@ public class ControladorColumnas {
         columnaFrances.getSelectionModel().clearSelection();
     }
 
+    /**Combina los métodos aceptar y comprobar en uno para un botón*/
     @FXML
     void aceptarComprobar(ActionEvent event) {
         comprobar();
         aceptar(event);
     }
 
+    /**Guarda los resultados en la base de datos y abre la ventana de menú*/
     @FXML
     void aceptar(ActionEvent event) {
         new DatabaseService().guardarResultados();
@@ -138,8 +146,7 @@ public class ControladorColumnas {
         }
     }
 
-
-
+    /**Comprueba la selección del usuario y muestra la siguiente palabra*/
     @FXML
     void comprobar() {
         if (palabraActual == null) return;
