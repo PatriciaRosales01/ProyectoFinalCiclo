@@ -26,6 +26,8 @@ public class Main extends Application {
         db.inicializarBaseDeDatos();
         db.cargarResultados();
 
+        Resultados.resetActividad();
+
         Parent root = FXMLLoader.load(getClass().getResource("/inicio.fxml"));
         stage.setTitle("Aprende Idiomas");
         stage.setScene(new Scene(root));

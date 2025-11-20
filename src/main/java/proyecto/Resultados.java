@@ -51,4 +51,27 @@ public class Resultados {
     }
 
 
+    /**Suma los resultados obtenidos en una actividad a los generales.*/
+    public static void añadirResultados(int ae, int fe, int ai, int fi, int af, int ff) {
+        aciertosEspañol += ae;
+        fallosEspañol += fe;
+        aciertosIngles += ai;
+        fallosIngles += fi;
+        aciertosFrances += af;
+        fallosFrances += ff;
+    }
+
+
+    /**Reinicia los contadores de aciertos y falllos globales*/
+    public static void resetActividad() {
+        aciertosEspañol = 0;
+        fallosEspañol = 0;
+        aciertosIngles = 0;
+        fallosIngles = 0;
+        aciertosFrances = 0;
+        fallosFrances = 0;
+    }
+
+
+
 }
