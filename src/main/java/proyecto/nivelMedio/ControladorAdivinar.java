@@ -123,29 +123,26 @@ public class ControladorAdivinar {
      * Actualiza los aciertos y los fallos y carga la siguiente palabra*/
     @FXML
     void comprobar() {
+        if (palabraActual == null) return;
+
         String[] respuestas = palabraActual.getTraduccion().split(",");
         String españolCorrecto = respuestas[0].trim();
         String inglesCorrecto = respuestas[1].trim();
         String francesCorrecto = respuestas[2].trim();
 
-        if (español.getText().trim().equalsIgnoreCase(españolCorrecto)) {
-            Resultados.setAciertosEspañol(Resultados.getAciertosEspañol() + 1);
-        } else {
-            Resultados.setFallosEspañol(Resultados.getFallosEspañol() + 1);
-        }
+        int ae = 0, fe = 0;
+        int ai = 0, fi = 0;
+        int af = 0, ff = 0;
 
-        if (ingles.getText().trim().equalsIgnoreCase(inglesCorrecto)) {
-            Resultados.setAciertosIngles(Resultados.getAciertosIngles() + 1);
-        } else {
-            Resultados.setFallosIngles(Resultados.getFallosIngles() + 1);
-        }
+        if (español.getText().trim().equalsIgnoreCase(españolCorrecto)) ae = 1; else fe = 1;
 
-        if (frances.getText().trim().equalsIgnoreCase(francesCorrecto)) {
-            Resultados.setAciertosFrances(Resultados.getAciertosFrances() + 1);
-        } else {
-            Resultados.setFallosFrances(Resultados.getFallosFrances() + 1);
-        }
+        if (ingles.getText().trim().equalsIgnoreCase(inglesCorrecto)) ai = 1; else fi = 1;
+
+        if (frances.getText().trim().equalsIgnoreCase(francesCorrecto)) af = 1; else ff = 1;
+
+        Resultados.añadirResultados(ae, fe, ai, fi, af, ff);
 
         nuevaPalabra();
     }
+
 }

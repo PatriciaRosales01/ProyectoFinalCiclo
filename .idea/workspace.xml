@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="Añadidos comentarios para los métodos de más clases">
+    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="Añadido en Resultados.java dos métodos para los resultados &#10;Añadido en Main.java el método para resetear los resultados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorNivelFacil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorNivelFacil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorColumnas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorColumnas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorOrdenar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelDificil/ControladorOrdenar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorEscoger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorEscoger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorTraduccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelFacil/ControladorTraduccion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorAdivinar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorAdivinar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorEspacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorEspacio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorNivelMedio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/nivelMedio/ControladorNivelMedio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +252,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763378836732</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Añadidos comentarios para los métodos de las clases restantes">
+      <option name="closed" value="true" />
+      <created>1763386420061</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1763386420061</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Añadido en Resultados.java dos métodos para los resultados &#10;Añadido en Main.java el método para resetear los resultados">
+      <option name="closed" value="true" />
+      <created>1763663418251</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1763663418251</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,6 +302,8 @@
     <MESSAGE value="Actualizados ControladorEspacio.java y ControladorOrdenar.java para añadir la suma de los resultados" />
     <MESSAGE value="Añadidos comentarios solo para cada clase" />
     <MESSAGE value="Añadidos comentarios para los métodos de más clases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadidos comentarios para los métodos de más clases" />
+    <MESSAGE value="Añadidos comentarios para los métodos de las clases restantes" />
+    <MESSAGE value="Añadido en Resultados.java dos métodos para los resultados &#10;Añadido en Main.java el método para resetear los resultados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido en Resultados.java dos métodos para los resultados &#10;Añadido en Main.java el método para resetear los resultados" />
   </component>
 </project>

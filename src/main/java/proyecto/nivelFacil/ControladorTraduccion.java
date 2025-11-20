@@ -55,7 +55,7 @@ public class ControladorTraduccion {
         DatabaseService db = new DatabaseService();
         listaPalabras = new ArrayList<>();
 
-        String sql = "SELECT palabra_es, traduccion_en, traduccion_fr FROM traducir";
+        String sql = "SELECT palabraEspañol, traduccionIngles, traduccionFrances FROM traducir";
 
         try (Connection conn = db.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql);
@@ -63,8 +63,8 @@ public class ControladorTraduccion {
 
             while (rs.next()) {
                 Palabra p = new Palabra();
-                p.setPalabra(rs.getString("palabra_es"));
-                p.setTraduccion(rs.getString("traduccion_en") + "," + rs.getString("traduccion_fr"));
+                p.setPalabra(rs.getString("palabraEspañol"));
+                p.setTraduccion(rs.getString("traduccionIngles") + "," + rs.getString("traduccionFrances"));
                 listaPalabras.add(p);
             }
 
@@ -122,22 +122,26 @@ public class ControladorTraduccion {
         String palabraIngles = traducciones[0].trim();
         String palabraFrances = traducciones[1].trim();
 
-        String ingles = traduccionIngles.getText().trim();
-        String frances = traduccionFrances.getText().trim();
+        int aciertosE = 0, fallosE = 0;
+        int aciertosI = 0, fallosI = 0;
+        int aciertosF = 0, fallosF = 0;
 
-        if (ingles.equalsIgnoreCase(palabraIngles)) {
-            Resultados.setAciertosIngles(Resultados.getAciertosIngles() + 1);
+        if (traduccionIngles.getText().trim().equalsIgnoreCase(palabraIngles)) {
+            aciertosI = 1;
         } else {
-            Resultados.setFallosIngles(Resultados.getFallosIngles() + 1);
+            fallosI = 1;
         }
 
-        if (frances.equalsIgnoreCase(palabraFrances)) {
-            Resultados.setAciertosFrances(Resultados.getAciertosFrances() + 1);
+        if (traduccionFrances.getText().trim().equalsIgnoreCase(palabraFrances)) {
+            aciertosF = 1;
         } else {
-            Resultados.setFallosFrances(Resultados.getFallosFrances() + 1);
+            fallosF = 1;
         }
+
+        Resultados.añadirResultados(aciertosE, fallosE, aciertosI, fallosI, aciertosF, fallosF);
 
         nuevaPalabra();
     }
+
 
 }

@@ -158,16 +158,23 @@ public class ControladorColumnas {
         String seleccionIngles = columnaIngles.getSelectionModel().getSelectedItem();
         String seleccionFrances = columnaFrances.getSelectionModel().getSelectedItem();
 
+        int ae = 0, fe = 0;
+        int ai = 0, fi = 0;
+        int af = 0, ff = 0;
+
         if (seleccionIngles != null && seleccionIngles.equalsIgnoreCase(correctaIngles))
-            Resultados.setAciertosIngles(Resultados.getAciertosIngles() + 1);
+            ai = 1;
         else
-            Resultados.setFallosIngles(Resultados.getFallosIngles() + 1);
+            fi = 1;
 
         if (seleccionFrances != null && seleccionFrances.equalsIgnoreCase(correctaFrances))
-            Resultados.setAciertosFrances(Resultados.getAciertosFrances() + 1);
+            af = 1;
         else
-            Resultados.setFallosFrances(Resultados.getFallosFrances() + 1);
+            ff = 1;
+
+        Resultados.añadirResultados(ae, fe, ai, fi, af, ff);
 
         nuevaPalabra();
     }
+
 }

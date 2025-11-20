@@ -127,22 +127,24 @@ public class ControladorEspacio {
         String respuestaUsuario = txtRespuesta.getText().trim();
         boolean correcto = respuestaUsuario.equalsIgnoreCase(fraseActual.respuesta);
 
+        int ae = 0, fe = 0;
+        int ai = 0, fi = 0;
+        int af = 0, ff = 0;
+
         switch (fraseActual.idioma.toLowerCase()) {
             case "es":
-                if (correcto) Resultados.setAciertosEspañol(Resultados.getAciertosEspañol() + 1);
-                else Resultados.setFallosEspañol(Resultados.getFallosEspañol() + 1);
+                if (correcto) ae = 1; else fe = 1;
                 break;
-
             case "en":
-                if (correcto) Resultados.setAciertosIngles(Resultados.getAciertosIngles() + 1);
-                else Resultados.setFallosIngles(Resultados.getFallosIngles() + 1);
+                if (correcto) ai = 1; else fi = 1;
                 break;
-
             case "fr":
-                if (correcto) Resultados.setAciertosFrances(Resultados.getAciertosFrances() + 1);
-                else Resultados.setFallosFrances(Resultados.getFallosFrances() + 1);
+                if (correcto) af = 1; else ff = 1;
                 break;
         }
+
+        Resultados.añadirResultados(ae, fe, ai, fi, af, ff);
     }
+
 
 }

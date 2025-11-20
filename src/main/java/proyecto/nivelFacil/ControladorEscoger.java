@@ -159,16 +159,23 @@ public class ControladorEscoger {
         String selecIngles = comboBoxIngles.getSelectionModel().getSelectedItem();
         String selecFrances = comboBoxFrances.getSelectionModel().getSelectedItem();
 
+        int aciertosE = 0, fallosE = 0;
+        int aciertosI = 0, fallosI = 0;
+        int aciertosF = 0, fallosF = 0;
+
         if (selecIngles != null && selecIngles.equalsIgnoreCase(correctIngles))
-            Resultados.setAciertosIngles(Resultados.getAciertosIngles() + 1);
+            aciertosI = 1;
         else
-            Resultados.setFallosIngles(Resultados.getFallosIngles() + 1);
+            fallosI = 1;
 
         if (selecFrances != null && selecFrances.equalsIgnoreCase(correctFrances))
-            Resultados.setAciertosFrances(Resultados.getAciertosFrances() + 1);
+            aciertosF = 1;
         else
-            Resultados.setFallosFrances(Resultados.getFallosFrances() + 1);
+            fallosF = 1;
+
+        Resultados.añadirResultados(aciertosE, fallosE, aciertosI, fallosI, aciertosF, fallosF);
 
         nuevaPalabra();
     }
+
 }
