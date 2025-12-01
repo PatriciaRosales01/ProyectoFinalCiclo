@@ -6,19 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="proyecto.nivelFacil.ControladorEscoger">
+<AnchorPane prefHeight="340.0" prefWidth="500.0"  style="-fx-background-image: url('verde.PNG');" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.nivelFacil.ControladorEscoger">
     <children>
-        <ComboBox fx:id="comboBoxIngles" layoutX="316.0" layoutY="174.0" prefWidth="150.0" />
-        <Button layoutX="179.0" layoutY="311.0" mnemonicParsing="false" onAction="#comprobar" text="Siguiente palabra" />
-        <Button layoutX="368.0" layoutY="311.0" mnemonicParsing="false" onAction="#aceptarComprobar" text="Menú" />
-        <Label layoutX="184.0" layoutY="46.0" text="Selecciona la opción correcta">
+        <ComboBox fx:id="comboBoxIngles" layoutX="290.0" layoutY="157.0" prefWidth="150.0" />
+        <Button layoutX="134.0" layoutY="285.0" mnemonicParsing="false" onAction="#comprobar" text="Siguiente palabra" />
+        <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" onAction="#aceptarComprobar" text="Menú" />
+        <Label layoutX="134.0" layoutY="44.0" text="Selecciona la opción correcta">
             <font>
                 <Font size="18.0" />
             </font></Label>
-        <Label fx:id="palabra" layoutX="266.0" layoutY="95.0" text="Palabra" />
-        <ComboBox fx:id="comboBoxFrances" layoutX="316.0" layoutY="226.0" prefWidth="150.0" />
-        <Label layoutX="140.0" layoutY="178.0" text="Inglés" />
-        <Label layoutX="140.0" layoutY="230.0" text="Francés" />
+        <Label fx:id="palabra" layoutX="213.0" layoutY="95.0" text="Palabra" />
+        <ComboBox fx:id="comboBoxFrances" layoutX="290.0" layoutY="213.0" prefWidth="150.0" />
+        <Label layoutX="102.0" layoutY="161.0" text="Inglés" />
+        <Label layoutX="98.0" layoutY="217.0" text="Francés" />
     </children>
 </AnchorPane>

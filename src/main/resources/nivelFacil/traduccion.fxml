@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="proyecto.nivelFacil.ControladorTraduccion">
+<AnchorPane prefHeight="340.0" prefWidth="500.0"  style="-fx-background-image: url('verde.PNG');" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.nivelFacil.ControladorTraduccion">
     <children>
         <Label layoutX="181.0" layoutY="26.0" text="Traducción directa">
             <font>

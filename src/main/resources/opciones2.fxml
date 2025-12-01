@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="340.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.Opciones2Controlador">
+<AnchorPane prefHeight="340.0" prefWidth="500.0" style="-fx-background-image: url('menu.png');" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.Opciones2Controlador">
    <children>
       <Label layoutX="167.0" layoutY="43.0" text="Escoge una opción">
          <font>
