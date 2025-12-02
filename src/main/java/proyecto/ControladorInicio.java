@@ -23,9 +23,6 @@ import java.io.IOException;
 
 public class ControladorInicio {
 
-    @FXML
-    private TextField nombreUsuario;
-
     /**Abre la ventana de selección de dificultad*/
     @FXML
     private void aceptar(ActionEvent event) {

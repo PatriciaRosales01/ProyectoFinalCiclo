@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="Modificados ControladorOrdenar.java, ControladorEspacio.java, ControladorColumnas.java, ControladorTraduccion.java, ControladorAdivinar.java y ControladorEscoger.java en el método comprobar() para que los resultados de todas las actividades se sumen">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/amarillo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rojo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/verde.png" afterDir="false" />
+    <list default="true" id="6a169568-6c62-49f7-86d9-49451a7ffb42" name="Changes" comment="Añadidas imágenes en los fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dificultad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dificultad.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inicio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelDificil/columnas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelDificil/columnas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelDificil/nivelDificil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelDificil/nivelDificil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelDificil/ordenar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelDificil/ordenar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelFacil/escoger.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelFacil/escoger.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelFacil/nivelFacil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelFacil/nivelFacil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelFacil/traduccion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelFacil/traduccion.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelMedio/adivinar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelMedio/adivinar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelMedio/espacio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelMedio/espacio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nivelMedio/nivelMedio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nivelMedio/nivelMedio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/opciones2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/opciones2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +272,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763664798130</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Añadidas imágenes para las ventanas">
+      <option name="closed" value="true" />
+      <created>1764608395007</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1764608395007</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Añadidas imágenes en los fxml">
+      <option name="closed" value="true" />
+      <created>1764608766888</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1764608766888</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,6 +325,8 @@
     <MESSAGE value="Añadidos comentarios para los métodos de las clases restantes" />
     <MESSAGE value="Añadido en Resultados.java dos métodos para los resultados &#10;Añadido en Main.java el método para resetear los resultados" />
     <MESSAGE value="Modificados ControladorOrdenar.java, ControladorEspacio.java, ControladorColumnas.java, ControladorTraduccion.java, ControladorAdivinar.java y ControladorEscoger.java en el método comprobar() para que los resultados de todas las actividades se sumen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificados ControladorOrdenar.java, ControladorEspacio.java, ControladorColumnas.java, ControladorTraduccion.java, ControladorAdivinar.java y ControladorEscoger.java en el método comprobar() para que los resultados de todas las actividades se sumen" />
+    <MESSAGE value="Añadidas imágenes para las ventanas" />
+    <MESSAGE value="Añadidas imágenes en los fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadidas imágenes en los fxml" />
   </component>
 </project>
